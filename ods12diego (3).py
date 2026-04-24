@@ -18,10 +18,10 @@ st.image("foto energia.jfif", caption="Impacto del consumo de energia dependiend
 # Usaremos un deslizador
 st.sidebar.header("Parámetros Ambientales")
 # Definimos los parámetros de nuestro deslizador:
-  # Límite inferior: 10kg. Es el límite inferior donde no hay basura
-  # Límite superior: 150kg. Es el máximo siendo muy pesimistas de kg de residuos
-  # Valor inicial: 68kg. Considero que es un buen valor que está por el promedio de 
-temp_input = st.sidebar.slider("Residuos (kg)", 10.0, 150.0, 68.0)
+  # Límite inferior: 5kg. Es el límite inferior donde no hay basura pero es practicamente imposible
+  # Límite superior: 120kg. Es el máximo siendo muy pesimistas de kg de residuos
+  # Valor inicial: 60kg. Considero que es un buen valor que está por el promedio de 
+temp_input = st.sidebar.slider("Residuos (kg)", 5.0, 120.0, 60.0)
 
 # Cargamos el archivo con los datos (.csv)
 df =  pd.read_csv('ods12.csv', encoding='latin-1')
