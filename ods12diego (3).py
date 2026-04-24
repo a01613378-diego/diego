@@ -11,7 +11,7 @@ Esta aplicación utiliza **Machine Learning** para predecir el impacto del calen
 en los arrecifes de coral, alineado con el **ODS 12: Energia y Residuos**.
 """)
 # Insertamos una imagen
-st.image("foto energia.jfif", caption="Impacto de los residuos en el consumo de energia.")
+st.image("foto energia.jfif", caption="Impacto del consumo de energia dependiendo los residuos.")
 
 #st.header('Datos personales')
 # Definimos cómo ingresará los datos el usuario
