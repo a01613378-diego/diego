@@ -8,7 +8,7 @@ st.write(''' # ODS 12: Energia y Residuos ''')
 # Insertamos texto con formato
 st.markdown("""
 Esta aplicación utiliza **Machine Learning** para predecir el impacto del calentamiento global
-en los arrecifes de coral, alineado con el **ODS 12: Energia y Residuos**.
+en el consumo de energia, alineado con el **ODS 12: Energia y Residuos**.
 """)
 # Insertamos una imagen
 st.image("foto energia.jfif", caption="Impacto del consumo de energia dependiendo los residuos.")
@@ -18,10 +18,10 @@ st.image("foto energia.jfif", caption="Impacto del consumo de energia dependiend
 # Usaremos un deslizador
 st.sidebar.header("Parámetros Ambientales")
 # Definimos los parámetros de nuestro deslizador:
-  # Límite inferior: 0kg. Es el límite inferior donde no hay basura
+  # Límite inferior: 10kg. Es el límite inferior donde no hay basura
   # Límite superior: 150kg. Es el máximo siendo muy pesimistas de kg de residuos
   # Valor inicial: 68kg. Considero que es un buen valor que está por el promedio de 
-temp_input = st.sidebar.slider("Residuos (kg)", 0.0, 150.0, 68.0)
+temp_input = st.sidebar.slider("Residuos (kg)", 10.0, 150.0, 68.0)
 
 # Cargamos el archivo con los datos (.csv)
 df =  pd.read_csv('ods12.csv', encoding='latin-1')
