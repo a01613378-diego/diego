@@ -24,7 +24,7 @@ st.sidebar.header("Parámetros Ambientales")
 temp_input = st.sidebar.slider("Velocidad (kg)", 0.0, 30.0, 15.0)
 
 # Cargamos el archivo con los datos (.csv)
-df =  pd.read_csv('ods7.csv', encoding='latin-1')
+df =  pd.read_csv('ods7diego.csv', encoding='latin-1')
 # Seleccionamos las variables
 X = df[['Velocidad_Viento_ms']]
 y = df['Eficiencia_Energetica_kWh']
