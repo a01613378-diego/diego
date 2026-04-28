@@ -21,7 +21,7 @@ st.sidebar.header("Parámetros Ambientales")
   # Límite inferior: 0ms. Es el límite inferior donde no hay aire
   # Límite superior: 30ms. Es el máximo donde el aire va más rápido
   # Valor inicial: 15ms. Considero que es un buen valor que está por el promedio de
-temp_input = st.sidebar.slider("Velocidad (kg)", 0.0, 30.0, 15.0)
+temp_input = st.sidebar.slider("Velocidad (ms)", 0.0, 30.0, 15.0)
 
 # Cargamos el archivo con los datos (.csv)
 df =  pd.read_csv('ods7diego.csv', encoding='latin-1')
