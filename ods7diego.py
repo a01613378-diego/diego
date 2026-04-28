@@ -7,8 +7,7 @@ import pandas as pd
 st.write(''' # ODS 7: Energía Asequible y No Contaminante ''')
 # Insertamos texto con formato
 st.markdown("""
-Esta aplicación utiliza **Machine Learning** para predecir el impacto del calentamiento global
-en los arrecifes de coral, alineado con el **Energía Asequible y No Contaminante**.
+Esta aplicación utiliza **Machine Learning** para predecir el impacto dela eficiencia energética, alineado con la  **Velocidad del aire**.
 """)
 # Insertamos una imagen
 st.image("foto ods7.jfif", caption="Impacto de la eficiencia energética con la velocidad del aire.")
