@@ -7,8 +7,7 @@ import pandas as pd
 st.write(''' # ODS 7: ENERGIA PRODUCIDA ''')
 # Insertamos texto con formato
 st.markdown("""
-Esta aplicación utiliza **Machine Learning** para predecir el impacto del calentamiento global
-en los arrecifes de coral, alineado con el **Energía Asequible y No Contaminante**.
+Esta aplicación utiliza **Machine Learning** para predecir la energia producida por la radiacion, alineado con el **Energía Asequible y No Contaminante**.
 """)
 # Insertamos una imagen
 st.image("7ODS.jfif", caption="ENERGIA PRODUCIDA POR LA INTENSIDAD DE LA RADIACION.")
@@ -20,8 +19,8 @@ st.sidebar.header("INTENSIDAD")
 # Definimos los parámetros de nuestro deslizador:
   # Límite inferior: 150W/m2. Es el límite inferior donde no hay aire
   # Límite superior: 1150W/m2. Es el máximo donde el aire va más rápido
-  # Valor inicial: 5750W/m2. Considero que es un buen valor que está por el promedio de
-temp_input = st.sidebar.slider("ENERGIS (kWh)", 150.0, 575.0, 1150.0)
+  # Valor inicial: 575W/m2. Considero que es un buen valor que está por el promedio de
+temp_input = st.sidebar.slider("INTENSIDAD DE LA RADIACION (W/M2)", 150.0, 575.0, 1150.0)
 
 # Cargamos el archivo con los datos (.csv)
 df =  pd.read_csv('ods7diegoo.csv', encoding='latin-1')
