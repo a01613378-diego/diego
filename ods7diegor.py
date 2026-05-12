@@ -20,7 +20,7 @@ st.sidebar.header("INTENSIDAD")
   # Límite inferior: 150W/m2. Es el límite inferior donde no hay aire
   # Límite superior: 1150W/m2. Es el máximo donde el aire va más rápido
   # Valor inicial: 575W/m2. Considero que es un buen valor que está por el promedio de
-temp_input = st.sidebar.slider("INTENSIDAD DE LA RADIACION (W/M2)", 150.0, 575.0, 1150.0)
+temp_input = st.sidebar.slider("INTENSIDAD DE LA RADIACION (W/M2)", 150.0, 1150.0, 575.0)
 
 # Cargamos el archivo con los datos (.csv)
 df =  pd.read_csv('ods7diegoo.csv', encoding='latin-1')
