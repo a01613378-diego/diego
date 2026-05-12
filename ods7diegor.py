@@ -18,13 +18,13 @@ st.image("7ODS.jfif", caption="ENERGIA PRODUCIDA POR LA INTENSIDAD DE LA RADIACI
 # Usaremos un deslizador
 st.sidebar.header("INTENSIDAD")
 # Definimos los parámetros de nuestro deslizador:
-  # Límite inferior: 20kWh. Es el límite inferior donde no hay aire
-  # Límite superior: 70kWh. Es el máximo donde el aire va más rápido
-  # Valor inicial: 105kWh. Considero que es un buen valor que está por el promedio de
-temp_input = st.sidebar.slider("ENERGIS (kWh)", 20.0, 70.0, 105.0)
+  # Límite inferior: 150W/m2. Es el límite inferior donde no hay aire
+  # Límite superior: 1150W/m2. Es el máximo donde el aire va más rápido
+  # Valor inicial: 5750W/m2. Considero que es un buen valor que está por el promedio de
+temp_input = st.sidebar.slider("ENERGIS (kWh)", 150.0, 575.0, 1150.0)
 
 # Cargamos el archivo con los datos (.csv)
-df =  pd.read_csv('ods7diegoO.csv', encoding='latin-1')
+df =  pd.read_csv('ods7diegoo.csv', encoding='latin-1')
 # Seleccionamos las variables
 X = df[['VAR_2']]
 y = df['VAR_4']
@@ -45,9 +45,9 @@ prediccion = b0 + b1[0]*temp_input
 st.subheader('ENERGIA PRODUCIDA')
 st.write(f'La energia es: {prediccion:.2f}kWh')
 
-if prediccion < 480:
+if prediccion < 20:
         st.success("Baja Productividad")
-elif prediccion < 800:
+elif prediccion < 65:
         st.warning("Productividad media")
 else:
         st.error("Alta productividad")
